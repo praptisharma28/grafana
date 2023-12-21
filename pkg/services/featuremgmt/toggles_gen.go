@@ -367,6 +367,10 @@ const (
 	// Support faster dashboard and folder search by splitting permission scopes into parts
 	FlagSplitScopes = "splitScopes"
 
+	// FlagSearchAlt
+	// Enable an alternative SQL search query hoping to speed up dashboard and folder search by inverting the query execution order
+	FlagSearchAlt = "searchAlt"
+
 	// FlagTraceToProfiles
 	// Enables linking between traces and profiles
 	FlagTraceToProfiles = "traceToProfiles"
