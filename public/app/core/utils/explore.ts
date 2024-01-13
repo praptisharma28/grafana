@@ -101,10 +101,6 @@ export async function getExploreUrl(args: GetExploreUrlArguments): Promise<strin
   return urlUtil.renderUrl('/explore', { panes: exploreState, schemaVersion: 1 });
 }
 
-export function requestIdGenerator(exploreId: string) {
-  return `explore_${exploreId}`;
-}
-
 export function buildQueryTransaction(
   exploreId: string,
   queries: DataQuery[],
@@ -127,7 +123,7 @@ export function buildQueryTransaction(
     panelId,
     targets: queries, // Datasources rely on DataQueries being passed under the targets key.
     range,
-    requestId: requestIdGenerator(exploreId),
+    requestId: 'explore_' + exploreId,
     rangeRaw: range.raw,
     scopedVars: {
       __interval: { text: interval, value: interval },

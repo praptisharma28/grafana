@@ -682,7 +682,6 @@ export class Explore extends React.PureComponent<Props, ExploreState> {
                                   width={width}
                                   onClose={this.toggleShowQueryInspector}
                                   timeZone={timeZone}
-                                  isMixed={datasourceInstance.meta.mixed || false}
                                 />
                               )}
                             </ErrorBoundaryAlert>

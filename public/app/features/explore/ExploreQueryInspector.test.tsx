@@ -39,7 +39,6 @@ const setup = (propOverrides = {}) => {
     exploreId: 'left',
     onClose: jest.fn(),
     timeZone: InternalTimeZones.utc,
-    isMixed: false,
     queryResponse: {
       state: LoadingState.Done,
       series: [],
